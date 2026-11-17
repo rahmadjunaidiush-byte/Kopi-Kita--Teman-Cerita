@@ -1,7 +1,7 @@
 const products = {
   "caramel-latte": { name: "Caramel Latte", price: 18000, image: "assets/images/Caramel Latte.png" },
   mocha: { name: "Mocha", price: 20000, image: "assets/images/Kopi Kita Mocha.png" },
-  americano: { name: "Americano", price: 15000, image: "assets/images/Americano.jpeg" },
+  americano: { name: "Americano", price: 15000, image: "assets/images/Americano.png" },
   cappuccino: { name: "Cappuccino", price: 18000, image: "assets/images/Cappucino.jpeg" },
   "taro-latte": { name: "Taro Latte", price: 20000, image: "assets/images/Taro Latte.jpeg" },
   "matcha-latte": { name: "Matcha Latte", price: 22000, image: "assets/images/Matcha.jpeg" }
