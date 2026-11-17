@@ -4,7 +4,10 @@ const products = {
   americano: { name: "Americano", price: 15000, image: "assets/images/Americano.png" },
   cappuccino: { name: "Cappuccino", price: 18000, image: "assets/images/Cappucino.jpeg" },
   "taro-latte": { name: "Taro Latte", price: 20000, image: "assets/images/Taro Latte.jpeg" },
-  "matcha-latte": { name: "Matcha Latte", price: 22000, image: "assets/images/Matcha.jpeg" }
+  "matcha-latte": { name: "Matcha Latte", price: 22000, image: "assets/images/Matcha.jpeg" },
+  "roti-bakar-cokelat-keju": { name: "Roti Bakar Cokelat Keju", price: 10000, image: "assets/images/roti-bakar-cokelat-keju.jpeg", unit: "porsi" },
+  "kentang-goreng": { name: "Kentang Goreng", price: 10000, image: "assets/images/kentang-goreng.jpeg", unit: "porsi" },
+  "donat-cokelat": { name: "Donat Cokelat", price: 10000, image: "assets/images/donat-cokelat.jpeg", unit: "porsi" }
 };
 
 const storageKey = "kopi-kita-cart";
@@ -62,7 +65,7 @@ function renderCart() {
   const totalPrice = entries.reduce((sum, [id, quantity]) => sum + products[id].price * quantity, 0);
 
   cartItems.innerHTML = entries.length ? `
-    <div class="cart-items-heading"><span>Pesanan kamu</span><span>${totalItems} gelas</span></div>
+    <div class="cart-items-heading"><span>Pesanan kamu</span><span>${totalItems} item</span></div>
     ${entries.map(([id, quantity]) => {
       const product = products[id];
       return `
@@ -70,7 +73,7 @@ function renderCart() {
           <img class="cart-thumb" src="${product.image}" alt="${product.name}" loading="lazy">
           <div class="cart-line-content">
             <div class="cart-line-top">
-              <div><h3>${product.name}</h3><p>${formatRupiah(product.price)} <span>/ gelas</span></p></div>
+              <div><h3>${product.name}</h3><p>${formatRupiah(product.price)} <span>/ ${product.unit || "gelas"}</span></p></div>
               <strong class="cart-line-total">${formatRupiah(product.price * quantity)}</strong>
             </div>
             <div class="cart-line-bottom">
