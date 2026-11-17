@@ -62,83 +62,93 @@
         <h2 id="menu-title">Menu Kopi Paling Disukai</h2>
         <p>Temukan racikan kopi favorit pelanggan yang siap menemani ceritamu.</p>
       </div>
+      <div class="menu-tools">
+        <div class="menu-assurance">
+          <span class="menu-assurance-dot" aria-hidden="true"></span>
+          <span>Diracik segar saat dipesan</span>
+          <span class="menu-assurance-divider" aria-hidden="true"></span>
+          <span>6 minuman pilihan</span>
+        </div>
+        <button class="menu-cart-button cart-trigger" type="button" aria-label="Buka keranjang, 0 produk">
+          <span class="menu-cart-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="19" r="1.3" fill="currentColor"/><circle cx="18" cy="19" r="1.3" fill="currentColor"/></svg>
+          </span>
+          <span class="menu-cart-copy"><strong>Keranjang Kamu</strong><small class="menu-cart-summary">0 item · Rp0</small></span>
+          <span class="cart-count" aria-live="polite">0</span>
+          <span class="menu-cart-arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
       <div class="product-grid">
         <article class="product-card reveal" data-product-card>
           <button class="product-image image-zoom" type="button" aria-label="Perbesar foto Caramel Latte">
-            <img src="assets/images/caramel-latte.jpg" alt="Caramel latte dengan lapisan krim" loading="lazy">
+            <img src="assets/images/Caramel Latte.png" alt="Caramel latte Kopi Kita dengan topping krim dan saus karamel" loading="lazy">
             <span class="product-tag">Favorit</span>
           </button>
           <div class="product-info">
             <p class="product-category">LATTE</p>
             <h3>Caramel Latte</h3>
             <p>Espresso, susu lembut, dan karamel manis yang seimbang.</p>
-            <div class="product-bottom"><strong>Rp18.000</strong><span>♡</span></div>
-            <button class="button button-dark add-to-cart" type="button" data-id="caramel-latte">Tambah ke Keranjang <span aria-hidden="true">+</span></button>
+            <div class="product-bottom"><strong>Rp18.000</strong><span>♡</span><button class="button button-dark add-to-cart" type="button" data-id="caramel-latte" aria-label="Tambah Caramel Latte ke keranjang"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 7H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg></button></div>
           </div>
         </article>
         <article class="product-card reveal" data-product-card>
           <button class="product-image image-zoom" type="button" aria-label="Perbesar foto Mocha">
-            <img src="assets/images/mocha.jpg" alt="Mocha dengan busa susu lembut" loading="lazy">
+            <img src="assets/images/Kopi Kita Mocha.png" alt="Mocha Kopi Kita dengan topping krim dan cokelat" loading="lazy">
             <span class="product-tag">Manis & kaya</span>
           </button>
           <div class="product-info">
             <p class="product-category">CHOCOLATE</p>
             <h3>Mocha</h3>
             <p>Perpaduan espresso, cokelat, dan susu dengan topping krim lembut.</p>
-            <div class="product-bottom"><strong>Rp20.000</strong><span>♡</span></div>
-            <button class="button button-dark add-to-cart" type="button" data-id="mocha">Tambah ke Keranjang <span aria-hidden="true">+</span></button>
+            <div class="product-bottom"><strong>Rp20.000</strong><span>♡</span><button class="button button-dark add-to-cart" type="button" data-id="mocha" aria-label="Tambah Mocha ke keranjang"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 7H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg></button></div>
           </div>
         </article>
         <article class="product-card reveal" data-product-card>
-          <button class="product-image image-zoom" type="button" aria-label="Perbesar foto Americano">
-            <img src="assets/images/americano.jpg" alt="Americano hitam tersaji di cangkir keramik" loading="lazy">
+          <button class="product-image product-image--contain image-zoom" type="button" aria-label="Perbesar foto Americano">
+            <img src="assets/images/Americano.jpeg" alt="Americano hitam tersaji di cangkir keramik" loading="lazy">
             <span class="product-tag">Kopi hitam</span>
           </button>
           <div class="product-info">
             <p class="product-category">KOPI HITAM</p>
             <h3>Americano</h3>
             <p>Kopi hitam pilihan Kopi Kita untuk menemani waktu santai.</p>
-            <div class="product-bottom"><strong>Rp15.000</strong><span>♡</span></div>
-            <button class="button button-dark add-to-cart" type="button" data-id="americano">Tambah ke Keranjang <span aria-hidden="true">+</span></button>
+            <div class="product-bottom"><strong>Rp15.000</strong><span>♡</span><button class="button button-dark add-to-cart" type="button" data-id="americano" aria-label="Tambah Americano ke keranjang"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 7H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg></button></div>
           </div>
         </article>
         <article class="product-card reveal" data-product-card>
-          <button class="product-image image-zoom" type="button" aria-label="Perbesar foto Cappuccino">
-            <img src="assets/images/cappuccino.jpg" alt="Cappuccino dengan foam susu dan latte art" loading="lazy">
+          <button class="product-image product-image--contain image-zoom" type="button" aria-label="Perbesar foto Cappuccino">
+            <img src="assets/images/Cappucino.jpeg" alt="Cappuccino dengan foam susu dan latte art" loading="lazy">
             <span class="product-tag">Klasik</span>
           </button>
           <div class="product-info">
             <p class="product-category">MILK COFFEE</p>
             <h3>Cappuccino</h3>
             <p>Espresso pekat berpadu foam susu lembut dengan taburan cokelat.</p>
-            <div class="product-bottom"><strong>Rp18.000</strong><span>♡</span></div>
-            <button class="button button-dark add-to-cart" type="button" data-id="cappuccino">Tambah ke Keranjang <span aria-hidden="true">+</span></button>
+            <div class="product-bottom"><strong>Rp18.000</strong><span>♡</span><button class="button button-dark add-to-cart" type="button" data-id="cappuccino" aria-label="Tambah Cappuccino ke keranjang"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 7H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg></button></div>
           </div>
         </article>
         <article class="product-card reveal" data-product-card>
-          <button class="product-image image-zoom" type="button" aria-label="Perbesar foto Kopi Gula Aren">
-            <img src="assets/images/kopi-aren.jpg" alt="Es kopi susu gula aren dengan es batu" loading="lazy">
-            <span class="product-tag">Pilihan Kita</span>
+          <button class="product-image product-image--contain image-zoom" type="button" aria-label="Perbesar foto Taro Latte">
+            <img src="assets/images/Taro Latte.jpeg" alt="Taro latte ungu dengan susu dan es" loading="lazy">
+            <span class="product-tag">Non-kopi</span>
           </button>
           <div class="product-info">
-            <p class="product-category">SIGNATURE</p>
-            <h3>Kopi Gula Aren</h3>
-            <p>Espresso, susu segar, dan manis alami gula aren Nusantara.</p>
-            <div class="product-bottom"><strong>Rp20.000</strong><span>♡</span></div>
-            <button class="button button-dark add-to-cart" type="button" data-id="kopi-aren">Tambah ke Keranjang <span aria-hidden="true">+</span></button>
+            <p class="product-category">TARO LATTE</p>
+            <h3>Taro Latte</h3>
+            <p>Taro lembut berpadu susu segar, creamy dan manis untuk menemani harimu.</p>
+            <div class="product-bottom"><strong>Rp20.000</strong><span>♡</span><button class="button button-dark add-to-cart" type="button" data-id="taro-latte" aria-label="Tambah Taro Latte ke keranjang"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 7H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg></button></div>
           </div>
         </article>
         <article class="product-card reveal" data-product-card>
-          <button class="product-image image-zoom" type="button" aria-label="Perbesar foto Matcha Latte">
-            <img src="assets/images/matcha-latte.jpg" alt="Matcha latte dengan latte art" loading="lazy">
+          <button class="product-image product-image--contain image-zoom" type="button" aria-label="Perbesar foto Matcha Latte">
+            <img src="assets/images/Matcha.jpeg" alt="Matcha latte dengan latte art" loading="lazy">
             <span class="product-tag">Non-kopi</span>
           </button>
           <div class="product-info">
             <p class="product-category">MATCHA</p>
             <h3>Matcha Latte</h3>
             <p>Matcha pilihan dengan susu lembut, diracik creamy dan menenangkan.</p>
-            <div class="product-bottom"><strong>Rp22.000</strong><span>♡</span></div>
-            <button class="button button-dark add-to-cart" type="button" data-id="matcha-latte">Tambah ke Keranjang <span aria-hidden="true">+</span></button>
+            <div class="product-bottom"><strong>Rp22.000</strong><span>♡</span><button class="button button-dark add-to-cart" type="button" data-id="matcha-latte" aria-label="Tambah Matcha Latte ke keranjang"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 7H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg></button></div>
           </div>
         </article>
       </div>

@@ -1,10 +1,10 @@
 const products = {
-  "caramel-latte": { name: "Caramel Latte", price: 18000, image: "assets/images/caramel-latte.jpg" },
-  mocha: { name: "Mocha", price: 20000, image: "assets/images/mocha.jpg" },
-  americano: { name: "Americano", price: 15000, image: "assets/images/americano.jpg" },
-  cappuccino: { name: "Cappuccino", price: 18000, image: "assets/images/cappuccino.jpg" },
-  "kopi-aren": { name: "Kopi Gula Aren", price: 20000, image: "assets/images/kopi-aren.jpg" },
-  "matcha-latte": { name: "Matcha Latte", price: 22000, image: "assets/images/matcha-latte.jpg" }
+  "caramel-latte": { name: "Caramel Latte", price: 18000, image: "assets/images/Caramel Latte.png" },
+  mocha: { name: "Mocha", price: 20000, image: "assets/images/Kopi Kita Mocha.png" },
+  americano: { name: "Americano", price: 15000, image: "assets/images/Americano.jpeg" },
+  cappuccino: { name: "Cappuccino", price: 18000, image: "assets/images/Cappucino.jpeg" },
+  "taro-latte": { name: "Taro Latte", price: 20000, image: "assets/images/Taro Latte.jpeg" },
+  "matcha-latte": { name: "Matcha Latte", price: 22000, image: "assets/images/Matcha.jpeg" }
 };
 
 const storageKey = "kopi-kita-cart";
@@ -14,7 +14,9 @@ const drawerBackdrop = document.querySelector(".drawer-backdrop");
 const cartItems = document.querySelector(".cart-items");
 const cartEmpty = document.querySelector(".cart-empty");
 const cartTotal = document.querySelector(".cart-total");
-const cartCount = document.querySelector(".cart-count");
+const cartCounts = [...document.querySelectorAll(".cart-count")];
+const cartTriggers = [...document.querySelectorAll(".cart-trigger")];
+const menuCartSummary = document.querySelector(".menu-cart-summary");
 const cartTrigger = document.querySelector(".cart-trigger");
 const checkoutButton = document.querySelector(".checkout-button");
 const toast = document.querySelector(".toast");
@@ -83,9 +85,12 @@ function renderCart() {
         </article>`;
     }).join("")}` : "";
 
-  cartCount.textContent = totalItems;
+  cartCounts.forEach((count) => { count.textContent = totalItems; });
+  if (menuCartSummary) {
+    menuCartSummary.textContent = `${totalItems} item · ${formatRupiah(totalPrice)}`;
+  }
   document.querySelector(".drawer-count").textContent = `${totalItems} ${totalItems === 1 ? "item" : "item"}`;
-  cartTrigger.setAttribute("aria-label", `Buka keranjang, ${totalItems} produk`);
+  cartTriggers.forEach((trigger) => trigger.setAttribute("aria-label", `Buka keranjang, ${totalItems} produk`));
   cartEmpty.classList.toggle("is-visible", entries.length === 0);
   cartItems.hidden = entries.length === 0;
   cartTotal.textContent = formatRupiah(totalPrice);
@@ -142,11 +147,11 @@ function addToCart(id) {
   cart[id] = Math.min((cart[id] || 0) + 1, 99);
   saveCart();
   renderCart();
-  cartCount.classList.remove("bump");
-  cartTrigger.classList.remove("cart-glow");
+  cartCounts.forEach((count) => count.classList.remove("bump"));
+  cartTriggers.forEach((trigger) => trigger.classList.remove("cart-glow"));
   requestAnimationFrame(() => {
-    cartCount.classList.add("bump");
-    cartTrigger.classList.add("cart-glow");
+    cartCounts.forEach((count) => count.classList.add("bump"));
+    cartTriggers.forEach((trigger) => trigger.classList.add("cart-glow"));
   });
   const card = document.querySelector(`[data-product-card] .add-to-cart[data-id="${id}"]`)?.closest(".product-card");
   if (card) {
